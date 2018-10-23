@@ -18,7 +18,7 @@ class Server (paramiko.ServerInterface):
     return paramiko.OPEN_FAILED_ADMINISTRATIVELY_PROHIBITED
 
   def check_auth_password(self,username,password):
-    if(username == 'luke') and (password == 'bambolina'):
+    if(username == '<USER>') and (password == '<PASS>'):
       return paramiko.AUTH_SUCCESSFUL
     return paramiko.AUTH_FAILED
 

@@ -6,8 +6,7 @@ import subprocess
 
 def ssh_command(ip,user,passwd,command):
   client = paramiko.SSHClient()
-  # importazione chiave pubbliche di host autorizzati
-  #client.load_host_keys('/home/justin/.ssh/known_hosts')
+
   client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
   client.connect(ip,username=user,password=passwd)
   ssh_session = client.get_transport().open_session()
@@ -31,4 +30,4 @@ def ssh_command(ip,user,passwd,command):
 
   return
 
-ssh_command('192.168.1.100','luke','bambolina','ClientConnected')
+ssh_command('<IP>','<USER>','<PASS>','ClientConnected')
